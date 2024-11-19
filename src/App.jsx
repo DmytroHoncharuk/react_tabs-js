@@ -11,14 +11,14 @@ export const tabs = [
 ];
 
 export const App = () => {
-  const [activeTabId, onTableSelected] = useState('');
+  const [activeTabId, setActiveTabId] = useState('');
 
   return (
     <div className="section">
       <Tabs
         tabs={tabs}
         activeTabId={activeTabId}
-        onTabSelected={onTableSelected}
+        onTabSelected={setActiveTabId} // Нове ім'я
       />
     </div>
   );
